@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Innovative Developer & Designer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        :root {
+            --royal-white: #f7f7ff;
+            --sky-blue: #05b4f8;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--royal-white);
+            color: #333;
+        }
+
+        .gradient-text {
+            background: linear-gradient(45deg, var(--sky-blue), #4682B4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-bg {
+            background: linear-gradient(135deg, var(--royal-white) 0%, var(--sky-blue) 100%);
+        }
+
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .glow {
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from { box-shadow: 0 0 5px var(--sky-blue), 0 0 10px var(--sky-blue); }
+            to { box-shadow: 0 0 10px #4682B4, 0 0 20px #4682B4; }
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 30px rgba(135, 206, 235, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white bg-opacity-90 backdrop-filter backdrop-blur-lg">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <a class="font-bold text-2xl gradient-text" href="#">Your Name</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-sky-600 hover:text-sky-800 transition duration-300">Home</a>
+                    <a href="#about" class="text-sky-600 hover:text-sky-800 transition duration-300">About</a>
+                    <a href="#projects" class="text-sky-600 hover:text-sky-800 transition duration-300">Projects</a>
+                    <a href="#skills" class="text-sky-600 hover:text-sky-800 transition duration-300">Skills</a>
+                    <a href="#contact" class="text-sky-600 hover:text-sky-800 transition duration-300">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="container mx-auto px-6 z-10">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
+                    <h1 class="text-5xl md:text-7xl font-bold mb-4 gradient-text">
+                        Innovate.<br>Create.<br>Inspire.
+                    </h1>
+                    <p class="text-xl md:text-2xl mb-8 text-sky-800">Transforming ideas into captivating digital experiences</p>
+                    <a href="#projects" class="bg-sky-600 text-white px-8 py-3 rounded-full hover:bg-sky-700 transition duration-300 shadow-lg hover:shadow-xl glow">
+                        Explore My Work
+                    </a>
+                </div>
+                <div class="md:w-1/2 relative">
+                    <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_iorpbol0.json" background="transparent" speed="1" style="width: 100%; height: 400px;" loop autoplay class="floating"></lottie-player>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-8 text-center gradient-text">About Me</h2>
+            <div class="flex flex-wrap items-center">
+                <div class="w-full md:w-1/2 mb-8 md:mb-0">
+                    <div class="relative">
+                        <div class="w-64 h-64 mx-auto rounded-full overflow-hidden shadow-2xl hover:shadow-3xl transition duration-300 transform hover:scale-105">
+                            <img src="your-image.jpg" alt="Your Name" class="object-cover w-full h-full">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 md:pl-12">
+                    <p class="text-lg mb-6 text-sky-800">As a visionary developer and designer, I blend cutting-edge technology with creative flair to craft immersive digital experiences. My passion lies in pushing the boundaries of what's possible in web development, always striving to create solutions that are not just functional, but truly captivating.</p>
+                    <p class="text-lg mb-6 text-sky-800">With a keen eye for detail and a deep understanding of user-centric design, I transform complex ideas into intuitive, beautiful interfaces that leave a lasting impression.</p>
+                    <a href="#contact" class="inline-block bg-sky-600 text-white px-6 py-2 rounded-full hover:bg-sky-700 transition duration-300 shadow-md hover:shadow-lg">Let's Connect</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-sky-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-8 text-center gradient-text">Featured Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card 1 -->
+                <div class="bg-white rounded-lg overflow-hidden card-hover">
+                    <img src="project1.jpg" alt="Project 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2 text-sky-600">Drowsiness Detection System Using CNN</h3>
+                        <p class="text-sky-800 mb-4"> The Project for real-time drowsiness detection in drivers to enhance road safety</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-sky-100 text-sky-600 px-2 py-1 rounded-full text-sm">ML</span>
+                            <span class="bg-sky-100 text-sky-600 px-2 py-1 rounded-full text-sm">AI</span>
+                            <span class="bg-sky-100 text-sky-600 px-2 py-1 rounded-full text-sm">Jupyter Notebook</span>
+                        </div>
+                        <a href="https://drive.google.com/file/d/1aeueG5f992jJftME_YLwyEdPYBOfUnYu/view?usp=drivesdk" class="text-sky-600 hover:text-sky-800 transition duration-300">View Project →</a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg overflow-hidden card-hover">
+                    <img src="project2.jpg" alt="Project 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                <h3 class="font-bold text-xl mb-2 text-sky-600">Automate Garden Hydration</h3>
+                <p class="text-sky-800 mb-4"> The project involves creating an automated garden watering system using a soil moisture sensor and Arduino. The system monitors soil moisture levels and activates a water pump when needed</p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="bg-sky-100 text-sky-600 px-2 py-1 rounded-full text-sm">Iot</span>
+                    <span class="bg-sky-100 text-sky-600 px-2 py-1 rounded-full text-sm">Iot cloud</span>
+                    </div>
+                <a href="https://drive.google.com/file/d/1fDOpTmg7t3_DShjhRglfNekbCKNNgtYK/view?usp=drivesdk" class="text-sky-600 hover:text-sky-800 transition duration-300">View Project →</a>
+            </div>
+        </div>
+        <div class="bg-white rounded-lg overflow-hidden card-hover">
+            <img src="project3.jpg" alt="Project 1" class="w-full h-48 object-cover">
+            <div class="p-6">
+        <h3 class="font-bold text-xl mb-2 text-sky-600">NEET ACHIEVERS HUB</h3>
+        <p class="text-sky-800 mb-4"> (Ongoing Project)The project is for Neet Aspirants where they can study Neet Subjects and topics in AR/VR and take unlimited quizzes with scorecard and moke test and with dashboard</p>
+        <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-sky-100 text-sky-600 px-2 py-1 rounded-full text-sm">HTML,CSS,JS</span>
+            <span class="bg-sky-100 text-sky-600 px-2 py-1 rounded-full text-sm">Java</span>
+            <span class="bg-sky-100 text-sky-600 px-2 py-1 rounded-full text-sm">Node.JS</span>
+            <span class="bg-sky-100 text-sky-600 px-2 py-1 rounded-full text-sm">tailwindcss,Bootstrap5</span>
+            </div>
+        <a href="" class="text-sky-600 hover:text-sky-800 transition duration-300">View Project →</a>
+    </div>
+</div>
+<div class="bg-white rounded-lg overflow-hidden card-hover">
+    <img src="project4.jpg" alt="Project 1" class="w-full h-48 object-cover">
+    <div class="p-6">
+<h3 class="font-bold text-xl mb-2 text-sky-600">Maze Solver</h3>
+<p class="text-sky-800 mb-4">The goal of this design assignment is to create a robot that can successfully navigate a challenging maze. The robot's sensors and intelligence algorithm will be able to recognise the path and obstacles in the maze. Several stages of the project will be broken down, including design, construction, programming, and testing.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+    <span class="bg-sky-100 text-sky-600 px-2 py-1 rounded-full text-sm">Web bots</span>
+    </div>
+<a href="https://docs.google.com/document/d/1fHKF8ix3M4hgTcw_LTXGVtZHaWaoBVGn/edit?usp=drivesdk&ouid=114108175156803769379&rtpof=true&sd=true" class="text-sky-600 hover:text-sky-800 transition duration-300">View Project →</a>
+</div>
+</div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-8 text-center gradient-text">Skills & Expertise</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <div class="bg-sky-100 p-6 rounded-lg shadow-md card-hover text-center">
+                    <i class="fas fa-code text-4xl mb-4 text-sky-600"></i>
+                    <h3 class="font-bold mb-2 text-sky-800">Frontend Development</h3>
+                    <p class="text-sky-600">HTML5, CSS3, JavaScript, React</p>
+                </div>
+                <div class="bg-sky-100 p-6 rounded-lg shadow-md card-hover text-center">
+                    <i class="fas fa-server text-4xl mb-4 text-sky-600"></i>
+                    <h3 class="font-bold mb-2 text-sky-800">Backend Development</h3>
+                    <p class="text-sky-600">Node.js, Express, MongoDB</p>
+                </div>      
+                <div class="bg-sky-100 p-6 rounded-lg shadow-md card-hover text-center">
+                    <i class="fas fa-paint-brush text-4xl mb-4 text-sky-600"></i>
+                    <h3 class="font-bold mb-2 text-sky-800">UI/UX Design</h3>
+                    <p class="text-sky-600">Figma, Adobe XD, Prototyping</p>
+                </div>
+                <div class="bg-sky-100 p-6 rounded-lg shadow-md card-hover text-center">
+                    <i class="fas fa-mobile-alt text-4xl mb-4 text-sky-600"></i>
+                    <h3 class="font-bold mb-2 text-sky-800">Responsive Design</h3>
+                    <p class="text-sky-600">Mobile-First, Adaptive Layouts</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-sky-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-8 text-center gradient-text">Get In Touch</h2>
+            <div class="max-w-lg mx-auto bg-white rounded-lg shadow-lg p-8">
+                <form class="space-y-6">
+                    <div>
+                        <label for="name" class="block mb-2 font-medium text-sky-800">Name</label>
+                        <input type="text" id="name" class="w-full px-4 py-2 bg-sky-50 border border-sky-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 text-sky-800" required>
+                    </div>
+                    <div>
+                        <label for="email" class="block mb-2 font-medium text-sky-800">Email</label>
+                        <input type="email" id="email" class="w-full px-4 py-2 bg-sky-50 border border-sky-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 text-sky-800" required>
+                    </div>
+                    <div>
+                        <label for="message" class="block mb-2 font-medium text-sky-800">Message</label>
+                        <textarea id="message" rows="4" class="w-full px-4 py-2 bg-sky-50 border border-sky-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 text-sky-800" required></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-sky-600 text-white py-2 px-4 rounded-lg hover:bg-sky-700 transition duration-300 shadow-md hover:shadow-lg">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white text-sky-800 py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 Your Name. All rights reserved.</p>
+            <div class="mt-4 flex justify-center space-x-4">
+                <a href="#" class="text-sky-600 hover:text-sky-800 transition duration-300"><i class="fab fa-github text-2xl"></i></a>
+                <a href="#" class="text-sky-600 hover:text-sky-800 transition duration-300"><i class="fab fa-linkedin text-2xl"></i></a>
+                <a href="#" class="text-sky-600 hover:text-sky-800 transition duration-300"><i class="fab fa-twitter text-2xl"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+         // GSAP animations
+         gsap.registerPlugin(ScrollTrigger);
+
+         // Hero section animations
+         gsap.from("#home h1", { opacity: 0, y: 50, duration: 1, delay: 0.5 });
+         gsap.from("#home p", { opacity: 0, y: 50, duration: 1, delay: 0.7 });
+         gsap.from("#home a", { opacity: 0, y: 50, duration: 1, delay: 0.9 });
+ 
+         // Animate sections on scroll
+         gsap.utils.toArray('section').forEach((section, i) => {
+             gsap.from(section, {
+                 opacity: 0,
+                 y: 50,
+                 duration: 1,
+                 scrollTrigger: {
+                     trigger: section,
+                     start: 'top 80%',
+                     end: 'top 20%',
+                     scrub: 1
+                 }
+             });
+         });
+ 
+         // Animate skill cards
+         gsap.utils.toArray('#skills .card-hover').forEach((card, i) => {
+             gsap.from(card, {
+                 opacity: 0,
+                 y: 50,
+                 duration: 0.5,
+                 delay: i * 0.1,
+                 scrollTrigger: {
+                     trigger: '#skills',
+                     start: 'top 80%'
+                 }
+             });
+         });
+ 
+         // Animate project cards
+         gsap.utils.toArray('#projects .card-hover').forEach((card, i) => {
+             gsap.from(card, {
+                 opacity: 0,
+                 y: 50,
+                 duration: 0.5,
+                 delay: i * 0.1,
+                 scrollTrigger: {
+                     trigger: '#projects',
+                     start: 'top 80%'
+                 }
+             });
+         });
+ 
+         // Smooth scrolling
+         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+             anchor.addEventListener('click', function (e) {
+                 e.preventDefault();
+                 document.querySelector(this.getAttribute('href')).scrollIntoView({
+                     behavior: 'smooth'
+                 });
+             });
+         });
+ 
+         // Parallax effect on hero section
+         gsap.to(".hero-bg", {
+             backgroundPosition: "50% 100%",
+             ease: "none",
+             scrollTrigger: {
+                 trigger: ".hero-bg",
+                 start: "top top",
+                 end: "bottom top",
+                 scrub: true
+             }
+         });
+ 
+         // Animated counter for skills
+         const counters = document.querySelectorAll('.counter');
+         counters.forEach(counter => {
+             const updateCount = () => {
+                 const target = +counter.getAttribute('data-target');
+                 const count = +counter.innerText;
+                 const inc = target / 200;
+                 if (count < target) {
+                     counter.innerText = Math.ceil(count + inc);
+                     setTimeout(updateCount, 1);
+                 } else {
+                     counter.innerText = target;
+                 }
+             };
+             updateCount();
+         });
+    </script>
+</body>
+</html>
